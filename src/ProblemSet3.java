@@ -29,7 +29,7 @@ public class ProblemSet3 {
         // comment out or uncomment as needed
 
         //ps.sign();          // executes Exercise 1
-        ps.parity();        // executes Exercise 2
+        //ps.parity();        // executes Exercise 2
         ps.ordered();       // executes Exercise 3
         ps.gpa();           // executes Exercise 4
         ps.grade();         // executes Exercise 5
@@ -95,7 +95,19 @@ public class ProblemSet3 {
      */
 
     public void ordered() {
+      //I need an array or something but I forgot how to do that
+      Scanner in = new Scanner(System.in);
+      System.out.print("Enter an integer: ");
+      int firstInt = in.nextInt();
+      System.out.print("Enter an integer: ");
+      int secondInt = in.nextInt();
+      System.out.print("Enter an integer: ");
+      int thirdInt = in.nextInt();
+      in.nextLine();
 
+
+
+      in.close();
     }
 
     /*
