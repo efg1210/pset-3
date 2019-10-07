@@ -30,7 +30,7 @@ public class ProblemSet3 {
 
         //ps.sign();          // executes Exercise 1
         //ps.parity();        // executes Exercise 2
-        ps.ordered();       // executes Exercise 3
+        //ps.ordered();       // executes Exercise 3
         ps.gpa();           // executes Exercise 4
         ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
@@ -129,8 +129,36 @@ public class ProblemSet3 {
     public void gpa() {
       Scanner in = new Scanner(System.in);
 
-      System.out.print("\nEnter a letter grade.");
-      String userGrade = in.next();
+      System.out.print("\nEnter a letter grade: ");
+      String userGrade = in.next().toUpperCase();
+      String gradeSign = "";
+      if (userGrade.length() > 1) {
+        gradeSign = userGrade.substring(1);
+        userGrade = userGrade.substring(0, 1);
+      }
+
+      double userGPA;
+
+      if (userGrade.equals("A")) {
+        userGPA = 4.00;
+      } else if (userGrade.equals("B")) {
+        userGPA = 3.00;
+      } else if (userGrade.equals("C")) {
+        userGPA = 2.00;
+      } else if (userGrade.equals("D")) {
+        userGPA = 1.00;
+      } else if (userGrade.equals("F")) {
+        userGPA = 0.00;
+      }
+
+      if (gradeSign.equals("+") && !(userGrade.equals("A") || userGrade.equals("F"))) {
+        userGPA += 0.33;
+      } else if (gradeSign.equals("-") && !(userGrade.equals("A") || userGrade.equals("F"))) {
+        
+      }
+
+      System.out.println("just grade " + userGrade);
+      System.out.println("just sign " + gradeSign);
 
       in.close();
     }
