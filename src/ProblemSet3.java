@@ -127,7 +127,12 @@ public class ProblemSet3 {
      */
 
     public void gpa() {
+      Scanner in = new Scanner(System.in);
 
+      System.out.print("\nEnter a letter grade.");
+      String userGrade = in.next();
+
+      in.close();
     }
 
     /*
