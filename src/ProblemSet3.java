@@ -50,7 +50,7 @@ public class ProblemSet3 {
 
     public void sign() {
       Scanner in = new Scanner(System.in);
-      System.out.print("Enter an integer: ");
+      System.out.print("\nEnter an integer: ");
       int userInteger = in.nextInt();
       in.nextLine();
 
@@ -73,7 +73,7 @@ public class ProblemSet3 {
 
     public void parity() {
       Scanner in = new Scanner(System.in);
-      System.out.print("Enter an integer: ");
+      System.out.print("\nEnter an integer: ");
       int userInteger = in.nextInt();
       in.nextLine();
 
@@ -95,9 +95,9 @@ public class ProblemSet3 {
      */
 
     public void ordered() {
-      //I need an array or something but I forgot how to do that
       Scanner in = new Scanner(System.in);
-      System.out.print("Enter an integer: ");
+      System.out.println("\nEnter three integers.");
+      System.out.print("\nEnter an integer: ");
       int firstInt = in.nextInt();
       System.out.print("Enter an integer: ");
       int secondInt = in.nextInt();
@@ -105,7 +105,17 @@ public class ProblemSet3 {
       int thirdInt = in.nextInt();
       in.nextLine();
 
-
+      if (firstInt < secondInt && secondInt < thirdInt) {
+        System.out.println("\nStrictly increasing.");
+      } else if (firstInt <= secondInt && secondInt <= thirdInt) {
+        System.out.println("\nIncreasing.");
+      } else if (firstInt > secondInt && secondInt > thirdInt) {
+        System.out.println("\nStrictly decreasing.");
+      } else if (firstInt >= secondInt && secondInt >= thirdInt) {
+        System.out.println("\nDecreasing.");
+      } else {
+        System.out.println("\nUnordered.");
+      }
 
       in.close();
     }
