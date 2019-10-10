@@ -186,20 +186,27 @@ public class ProblemSet3 {
       double userGrade = in.nextDouble();
       in.nextLine();
 
+      final double HIGH_A = 100;
+      final double LOW_A = 90;
+      final double LOW_B = 80;
+      final double LOW_C = 70;
+      final double LOW_D = 60;
+      final double LOW_F = 0;
+      
       System.out.println();
-      if(userGrade >= 90 && (userGrade < 100 || userGrade == 100)){
+      if(userGrade >= LOW_A && (userGrade < HIGH_A || userGrade == HIGH_A)){
         System.out.println("You recieved an A.");
-      } else if (userGrade >= 80 && userGrade < 90) {
+      } else if (userGrade >= LOW_B && userGrade < LOW_A) {
         System.out.println("You recieved a B.");
-      } else if (userGrade >= 70 && userGrade < 80) {
+      } else if (userGrade >= LOW_C && userGrade < LOW_B) {
         System.out.println("You recieved a C.");
-      } else if (userGrade >= 60 && userGrade < 70) {
+      } else if (userGrade >= LOW_D && userGrade < LOW_C) {
         System.out.println("You recieved a D.");
-      } else if (userGrade >= 0 && userGrade < 60) {
+      } else if (userGrade >= LOW_F && userGrade < LOW_D) {
         System.out.println("You recieved an F.");
-      } else if (userGrade > 100) {
+      } else if (userGrade > HIGH_A) {
         System.out.println("Grades above 100 are invalid.");
-      } else if (userGrade < 0) {
+      } else if (userGrade < LOW_F) {
         System.out.println("Grades below 0 are invalid.");
       }
 
