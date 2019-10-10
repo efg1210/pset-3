@@ -31,8 +31,8 @@ public class ProblemSet3 {
         //ps.sign();          // executes Exercise 1
         //ps.parity();        // executes Exercise 2
         //ps.ordered();       // executes Exercise 3
-        ps.gpa();           // executes Exercise 4
-        ps.grade();         // executes Exercise 5
+        //ps.gpa();           // executes Exercise 4
+        //ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
         ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
@@ -166,9 +166,9 @@ public class ProblemSet3 {
       } 
       
       if ((gradeSign.equals("-") || gradeSign.equals("+")) && userGrade.equals("F")) {
-        System.out.print("That's not a valid letter grade.");
+        System.out.print("\nThat's not a valid letter grade.");
       } else {
-        System.out.printf("Your GPA is %.2f.", userGPA);
+        System.out.printf("\nYour GPA is %.2f.", userGPA);
       }
 
       in.close();
@@ -181,7 +181,29 @@ public class ProblemSet3 {
      */
 
     public void grade() {
+      Scanner in = new Scanner(System.in);
+      System.out.print("\nEnter a grade: ");
+      double userGrade = in.nextDouble();
+      in.nextLine();
 
+      System.out.println();
+      if(userGrade >= 90 && (userGrade < 100 || userGrade == 100)){
+        System.out.println("You recieved an A.");
+      } else if (userGrade >= 80 && userGrade < 90) {
+        System.out.println("You recieved a B.");
+      } else if (userGrade >= 70 && userGrade < 80) {
+        System.out.println("You recieved a C.");
+      } else if (userGrade >= 60 && userGrade < 70) {
+        System.out.println("You recieved a D.");
+      } else if (userGrade >= 0 && userGrade < 60) {
+        System.out.println("You recieved an F.");
+      } else if (userGrade > 100) {
+        System.out.println("Grades above 100 are invalid.");
+      } else if (userGrade < 0) {
+        System.out.println("Grades below 0 are invalid.");
+      }
+
+      in.close();
     }
 
     /*
