@@ -129,6 +129,14 @@ public class ProblemSet3 {
     public void gpa() {
       Scanner in = new Scanner(System.in);
 
+      final double A_VALUE = 4.00;
+      final double B_VALUE = 3.00;
+      final double C_VALUE = 2.00;
+      final double D_VALUE = 1.00;
+      final double F_VALUE = 0.00;
+      final double PLUS_VALUE = 0.33;
+      final double MINUS_VALUE = -0.33;
+      
       System.out.print("\nEnter a letter grade: ");
       String userGrade = in.next().toUpperCase();
       String gradeSign = "";
@@ -137,28 +145,31 @@ public class ProblemSet3 {
         userGrade = userGrade.substring(0, 1);
       }
 
-      double userGPA;
+      double userGPA = 0;
 
       if (userGrade.equals("A")) {
-        userGPA = 4.00;
+        userGPA = A_VALUE;
       } else if (userGrade.equals("B")) {
-        userGPA = 3.00;
+        userGPA = B_VALUE;
       } else if (userGrade.equals("C")) {
-        userGPA = 2.00;
+        userGPA = C_VALUE;
       } else if (userGrade.equals("D")) {
-        userGPA = 1.00;
+        userGPA = D_VALUE;
       } else if (userGrade.equals("F")) {
-        userGPA = 0.00;
+        userGPA = F_VALUE;
       }
 
       if (gradeSign.equals("+") && !(userGrade.equals("A") || userGrade.equals("F"))) {
-        userGPA += 0.33;
-      } else if (gradeSign.equals("-") && !(userGrade.equals("A") || userGrade.equals("F"))) {
-        
+        userGPA += PLUS_VALUE;
+      } else if (gradeSign.equals("-") && !userGrade.equals("F")) {
+        userGPA += MINUS_VALUE;
+      } 
+      
+      if ((gradeSign.equals("-") || gradeSign.equals("+")) && userGrade.equals("F")) {
+        System.out.print("That's not a valid letter grade.");
+      } else {
+        System.out.printf("Your GPA is %.2f.", userGPA);
       }
-
-      System.out.println("just grade " + userGrade);
-      System.out.println("just sign " + gradeSign);
 
       in.close();
     }
