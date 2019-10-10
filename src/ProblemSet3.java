@@ -220,7 +220,40 @@ public class ProblemSet3 {
      */
 
     public void cards() {
+      Scanner in = new Scanner(System.in);
+      System.out.print("\nEnter a grade: ");
+      String userInput = in.next();
 
+      String rank = userInput.substring(0, 1);
+      String suit = userInput.substring(1);
+
+      switch (rank) {
+        case "":
+          break;
+        case "":
+          break;
+        case "":
+          break;
+        case "":
+          break;
+        case "":
+          break;
+        case "":
+          break;
+        case "":
+          break;
+        case "":
+          break;
+        case "":
+          break;
+        case "":
+          break;
+        
+      }
+
+      System.out.println(userInput);
+
+      in.close();
     }
 
     /*
