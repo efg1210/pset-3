@@ -221,37 +221,74 @@ public class ProblemSet3 {
 
     public void cards() {
       Scanner in = new Scanner(System.in);
-      System.out.print("\nEnter a grade: ");
+      System.out.print("\nEnter a card: ");
       String userInput = in.next();
 
-      String rank = userInput.substring(0, 1);
-      String suit = userInput.substring(1);
+      String rank = userInput.substring(0, 1).toUpperCase();
+      String suit = userInput.substring(1).toUpperCase();
+
+      String message = "\n";
+      boolean invalid = false;
 
       switch (rank) {
-        case "":
+        case "2":
+          message += "Two of";
           break;
-        case "":
+        case "3":
+          message += "Three of";
           break;
-        case "":
+        case "4":
+          message += "Four of";
           break;
-        case "":
+        case "5":
+          message += "Five of";
           break;
-        case "":
+        case "6":
+          message += "Six of";
           break;
-        case "":
+        case "7":
+          message += "Seven of";
           break;
-        case "":
+        case "8":
+          message += "Eight of";
           break;
-        case "":
+        case "9":
+          message += "Nine of";
           break;
-        case "":
+        case "T":
+          message += "Ten of";
           break;
-        case "":
+        case "J":
+          message += "Jack of";
           break;
-        
+        case "Q":
+          message += "Queen of";
+          break;
+        case "K":
+          message += "King of";
+          break;
+        case "A":
+          message += "Ace of";
+          break;
+        default:
+          message = "\nThat's not a valid rank.";
+          invalid = true;
+          break;
       }
 
-      System.out.println(userInput);
+      if (suit.equals("C") && !invalid) {
+        message += " Clubs.";
+      } else if (suit.equals("D") && !invalid) {
+        message += " Diamonds.";
+      } else if (suit.equals("H") && !invalid) {
+        message += " Hearts.";
+      } else if (suit.equals("S") && !invalid) {
+        message += " Spades.";
+      } else if (!invalid) {
+        message = "\nThat's not a valid suit.";
+      }
+
+      System.out.println(message);
 
       in.close();
     }
