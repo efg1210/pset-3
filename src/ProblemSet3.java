@@ -34,7 +34,7 @@ public class ProblemSet3 {
         //ps.gpa();           // executes Exercise 4
         //ps.grade();         // executes Exercise 5
         //ps.cards();         // executes Exercise 6
-        ps.leapYear();      // executes Exercise 7
+        //ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
@@ -322,7 +322,39 @@ public class ProblemSet3 {
      */
 
     public void state() {
+      Scanner in = new Scanner(System.in);
+      System.out.print("\nEnter a temperature: ");
+      double temp = in.nextDouble();
+      in.nextLine();
+      System.out.print("Enter a scale: ");
+      String scale = in.next().toUpperCase();
 
+      final int FREEZING_POINT_C = 0;
+      final int BOILING_PONT_C = 100;
+
+      boolean valid = true;
+
+      if (scale.equals("F")) {
+        temp -= 32;
+        temp *= 5;
+        temp /= 9;
+      } else if (!scale.equals("C")) {
+        valid = false;
+      }
+
+      if (valid) {
+        if (temp >= 100) {
+          System.out.println("\nGas.");
+        } else if (temp <= 0) {
+          System.out.println("\nSolid.");
+        } else if (temp < 100 && temp > 0) {
+          System.out.println("\nLiquid.");
+        }
+      } else {
+        System.out.println("\nThat's not a valid scale.");
+      }
+
+      in.close();
     }
 
     /*
