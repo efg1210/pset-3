@@ -215,48 +215,34 @@ public class ProblemSet3 {
 
       switch (rank) {
         case "2":
-          message += "Two of";
-          break;
+          message += "Two of"; break;
         case "3":
-          message += "Three of";
-          break;
+          message += "Three of"; break;
         case "4":
-          message += "Four of";
-          break;
+          message += "Four of"; break;
         case "5":
-          message += "Five of";
-          break;
+          message += "Five of"; break;
         case "6":
-          message += "Six of";
-          break;
+          message += "Six of"; break;
         case "7":
-          message += "Seven of";
-          break;
+          message += "Seven of"; break;
         case "8":
-          message += "Eight of";
-          break;
+          message += "Eight of"; break;
         case "9":
-          message += "Nine of";
-          break;
+          message += "Nine of"; break;
         case "T":
-          message += "Ten of";
-          break;
+          message += "Ten of"; break;
         case "J":
-          message += "Jack of";
-          break;
+          message += "Jack of"; break;
         case "Q":
-          message += "Queen of";
-          break;
+          message += "Queen of"; break;
         case "K":
-          message += "King of";
-          break;
+          message += "King of"; break;
         case "A":
-          message += "Ace of";
-          break;
+          message += "Ace of"; break;
         default:
           message = "\nThat's not a valid rank.";
-          invalid = true;
-          break;
+          invalid = true; break;
       }
 
       if (suit.equals("C") && !invalid) {
