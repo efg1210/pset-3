@@ -35,7 +35,7 @@ public class ProblemSet3 {
         //ps.grade();         // executes Exercise 5
         //ps.cards();         // executes Exercise 6
         //ps.leapYear();      // executes Exercise 7
-        ps.state();         // executes Exercise 8
+        //ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
 
@@ -364,7 +364,39 @@ public class ProblemSet3 {
      */
 
     public void months() {
+      Scanner in = new Scanner(System.in);
+      System.out.print("\nEnter a month: ");
+      String month = in.next().toUpperCase();
 
+      if(month.equals("JANUARY") || month.equals("JAN") || month.equals("JANU")) {
+        System.out.println("\n31 days.");
+      } else if (month.equals("FEBRUARY") || month.equals("FEB") || month.equals("FEBR")) {
+        System.out.println("\n28 or 29 days.");
+      } else if (month.equals("MARCH") || month.equals("MAR") || month.equals("MARC")) {
+        System.out.println("\n31 days.");
+      } else if (month.equals("APRIL") || month.equals("APR") || month.equals("APRI")) {
+        System.out.println("\n30 days.");
+      } else if (month.equals("MAY")) {
+        System.out.println("\n31 days.");
+      } else if (month.equals("JUNE") || month.equals("JUN")) {
+        System.out.println("\n30 days.");
+      } else if (month.equals("JULY") || month.equals("JUL")) {
+        System.out.println("\n31 days.");
+      } else if (month.equals("AUGUST") || month.equals("AUG") || month.equals("AUGU")) {
+        System.out.println("\n31 days.");
+      } else if (month.equals("SEPTEMBER") || month.equals("SEP") || month.equals("SEPT")) {
+        System.out.println("\n30 days.");
+      } else if (month.equals("OCTOBER") || month.equals("OCT") || month.equals("OCTO")) {
+        System.out.println("\n31 days.");
+      } else if (month.equals("NOVEMBER") || month.equals("NOV") || month.equals("NOVE")) {
+        System.out.println("\n30 days.");
+      } else if (month.equals("DECEMBER") || month.equals("DEC") || month.equals("DECE")) {
+        System.out.println("\n31 days.");
+      } else {
+        System.out.println("\nThat's not a valid month.");
+      }
+
+      in.close();
     }
 
     /*
