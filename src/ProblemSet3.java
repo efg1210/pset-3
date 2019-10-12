@@ -28,15 +28,15 @@ public class ProblemSet3 {
 
         // comment out or uncomment as needed
 
-        //ps.sign();          // executes Exercise 1
-        //ps.parity();        // executes Exercise 2
-        //ps.ordered();       // executes Exercise 3
-        //ps.gpa();           // executes Exercise 4
-        //ps.grade();         // executes Exercise 5
-        //ps.cards();         // executes Exercise 6
-        //ps.leapYear();      // executes Exercise 7
-        //ps.state();         // executes Exercise 8
-        //ps.months();        // executes Exercise 9
+        ps.sign();          // executes Exercise 1
+        ps.parity();        // executes Exercise 2
+        ps.ordered();       // executes Exercise 3
+        ps.gpa();           // executes Exercise 4
+        ps.grade();         // executes Exercise 5
+        ps.cards();         // executes Exercise 6
+        ps.leapYear();      // executes Exercise 7
+        ps.state();         // executes Exercise 8
+        ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
 
         in.close();
@@ -49,7 +49,6 @@ public class ProblemSet3 {
      */
 
     public void sign() {
-      Scanner in = new Scanner(System.in);
       System.out.print("\nEnter an integer: ");
       int userInteger = in.nextInt();
       in.nextLine();
@@ -61,8 +60,6 @@ public class ProblemSet3 {
       } else {
         System.out.println("\nZero.");
       }
-
-      in.close();
     }
 
     /*
@@ -72,7 +69,6 @@ public class ProblemSet3 {
      */
 
     public void parity() {
-      Scanner in = new Scanner(System.in);
       System.out.print("\nEnter an integer: ");
       int userInteger = in.nextInt();
       in.nextLine();
@@ -84,8 +80,6 @@ public class ProblemSet3 {
       } else {
         System.out.println("\nError.");
       }
-
-      in.close();
     }
 
     /*
@@ -95,7 +89,6 @@ public class ProblemSet3 {
      */
 
     public void ordered() {
-      Scanner in = new Scanner(System.in);
       System.out.println("\nEnter three integers.");
       System.out.print("\nEnter an integer: ");
       int firstInt = in.nextInt();
@@ -116,8 +109,6 @@ public class ProblemSet3 {
       } else {
         System.out.println("\nUnordered.");
       }
-
-      in.close();
     }
 
     /*
@@ -127,8 +118,6 @@ public class ProblemSet3 {
      */
 
     public void gpa() {
-      Scanner in = new Scanner(System.in);
-
       final double A_VALUE = 4.00;
       final double B_VALUE = 3.00;
       final double C_VALUE = 2.00;
@@ -170,8 +159,6 @@ public class ProblemSet3 {
       } else {
         System.out.printf("\nYour GPA is %.2f.", userGPA);
       }
-
-      in.close();
     }
 
     /*
@@ -181,11 +168,6 @@ public class ProblemSet3 {
      */
 
     public void grade() {
-      Scanner in = new Scanner(System.in);
-      System.out.print("\nEnter a grade: ");
-      double userGrade = in.nextDouble();
-      in.nextLine();
-
       final double HIGH_A = 100;
       final double LOW_A = 90;
       final double LOW_B = 80;
@@ -193,6 +175,10 @@ public class ProblemSet3 {
       final double LOW_D = 60;
       final double LOW_F = 0;
       
+      System.out.print("\n\nEnter a grade: ");
+      double userGrade = in.nextDouble();
+      in.nextLine();
+
       System.out.println();
       if(userGrade >= LOW_A && (userGrade < HIGH_A || userGrade == HIGH_A)){
         System.out.println("You recieved an A.");
@@ -209,8 +195,6 @@ public class ProblemSet3 {
       } else if (userGrade < LOW_F) {
         System.out.println("Grades below 0 are invalid.");
       }
-
-      in.close();
     }
 
     /*
@@ -220,7 +204,6 @@ public class ProblemSet3 {
      */
 
     public void cards() {
-      Scanner in = new Scanner(System.in);
       System.out.print("\nEnter a card: ");
       String userInput = in.next();
 
@@ -289,8 +272,6 @@ public class ProblemSet3 {
       }
 
       System.out.println(message);
-
-      in.close();
     }
 
     /*
@@ -300,7 +281,6 @@ public class ProblemSet3 {
      */
 
     public void leapYear() {
-      Scanner in = new Scanner(System.in);
       System.out.print("\nEnter a year: ");
       int year = in.nextInt();
       in.nextLine();
@@ -310,8 +290,6 @@ public class ProblemSet3 {
       } else {
         System.out.println("\n" + year + " is not a leap year.");
       }
-
-      in.close();
     }
 
     /*
@@ -322,15 +300,14 @@ public class ProblemSet3 {
      */
 
     public void state() {
-      Scanner in = new Scanner(System.in);
+      final int FREEZING_POINT_C = 0;
+      final int BOILING_PONT_C = 100;
+
       System.out.print("\nEnter a temperature: ");
       double temp = in.nextDouble();
       in.nextLine();
       System.out.print("Enter a scale: ");
       String scale = in.next().toUpperCase();
-
-      final int FREEZING_POINT_C = 0;
-      final int BOILING_PONT_C = 100;
 
       boolean valid = true;
 
@@ -353,8 +330,6 @@ public class ProblemSet3 {
       } else {
         System.out.println("\nThat's not a valid scale.");
       }
-
-      in.close();
     }
 
     /*
@@ -364,7 +339,6 @@ public class ProblemSet3 {
      */
 
     public void months() {
-      Scanner in = new Scanner(System.in);
       System.out.print("\nEnter a month: ");
       String month = in.next().toUpperCase();
 
@@ -395,8 +369,6 @@ public class ProblemSet3 {
       } else {
         System.out.println("\nThat's not a valid month.");
       }
-
-      in.close();
     }
 
     /*
@@ -406,7 +378,9 @@ public class ProblemSet3 {
      */
 
     public void salary() {
-      Scanner in = new Scanner(System.in);
+      final int OVERTIME_THRESHOLD = 40;
+      final double OVERTIME_PAY = 1.5;
+
       System.out.print("\nWage: ");
       double wage = in.nextDouble();
       in.nextLine();
@@ -414,9 +388,6 @@ public class ProblemSet3 {
       double hours = in.nextDouble();
       in.nextLine();
       boolean valid = true;
-
-      final int OVERTIME_THRESHOLD = 40;
-      final double OVERTIME_PAY = 1.5;
 
       if (wage < 0) {
         valid = false;
@@ -434,9 +405,8 @@ public class ProblemSet3 {
       }
 
       if (valid) {
-        System.out.printf("\nYou'll make $%,.2f this week.", money);
+        System.out.printf("\nYou'll make $%,.2f this week.\n", money);
       }
 
-      in.close();
     }
 }
